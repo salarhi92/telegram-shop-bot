@@ -114,7 +114,7 @@ async def handle_text(update: Update, context: ContextTypes.DEFAULT_TYPE):
                 await update.message.reply_text(f"ℹ️ {product['name']}\n\nClick the button below to pay:", reply_markup=markup)
 
                 keyboard = ReplyKeyboardMarkup([[KeyboardButton("Back")]], resize_keyboard=True)
-                await update.message.reply_text("📩 After payment, please check your email. activation code will send via email.", reply_markup=keyboard)
+                await update.message.reply_text("📩 Softwares: After payment, please check your email. activation code will send via email. FLASH USDT: flashes will send automatic to the wallet address that you paid with", reply_markup=keyboard)
                 user_state[chat_id] = "AWAITING_PHONE"
             else:
                 keyboard = ReplyKeyboardMarkup([[KeyboardButton("Back")]], resize_keyboard=True)
@@ -122,7 +122,7 @@ async def handle_text(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
         else:
             keyboard = ReplyKeyboardMarkup([[KeyboardButton("Back")]], resize_keyboard=True)
-            await update.message.reply_text("❗ After payment, please check your email. activation code will send via email.", reply_markup=keyboard)
+            await update.message.reply_text("❗ Softwares: After payment, please check your email. activation code will send via email. FLASH USDT: flashes will send automatic to the wallet address that you paid with", reply_markup=keyboard)
 
     elif state == "CONTACT_INFO":
         if text == "Back":
@@ -142,7 +142,7 @@ async def handle_text(update: Update, context: ContextTypes.DEFAULT_TYPE):
             await update.message.reply_text("👋 Please select a category:", reply_markup=main_menu_keyboard())
         else:
             keyboard = ReplyKeyboardMarkup([[KeyboardButton("Back")]], resize_keyboard=True)
-            await update.message.reply_text("❗ After payment, please check your email. activation code will send via email.", reply_markup=keyboard)
+            await update.message.reply_text("❗ Softwares: After payment, please check your email. activation code will send via email. FLASH USDT: flashes will send automatic to the wallet address that you paid with", reply_markup=keyboard)
 
     else:
         await update.message.reply_text("❗ Please select a valid option from the menu or send your phone number.", reply_markup=main_menu_keyboard())
