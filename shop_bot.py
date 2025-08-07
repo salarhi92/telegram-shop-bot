@@ -122,7 +122,7 @@ async def handle_text(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
         else:
             keyboard = ReplyKeyboardMarkup([[KeyboardButton("Back")]], resize_keyboard=True)
-            await update.message.reply_text("❗ Please send your phone number starting with + to order, or press Back.", reply_markup=keyboard)
+            await update.message.reply_text("❗ After payment, please check your email. activation code will send via email.", reply_markup=keyboard)
 
     elif state == "CONTACT_INFO":
         if text == "Back":
