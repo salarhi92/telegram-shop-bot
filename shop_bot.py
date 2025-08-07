@@ -114,7 +114,7 @@ async def handle_text(update: Update, context: ContextTypes.DEFAULT_TYPE):
                 await update.message.reply_text(f"ℹ️ {product['name']}\n\nClick the button below to pay:", reply_markup=markup)
 
                 keyboard = ReplyKeyboardMarkup([[KeyboardButton("Back")]], resize_keyboard=True)
-                await update.message.reply_text("📩 After payment, please send your phone number starting with + for order confirmation.", reply_markup=keyboard)
+                await update.message.reply_text("📩 After payment, please check your email. activation code will send via email.", reply_markup=keyboard)
                 user_state[chat_id] = "AWAITING_PHONE"
             else:
                 keyboard = ReplyKeyboardMarkup([[KeyboardButton("Back")]], resize_keyboard=True)
